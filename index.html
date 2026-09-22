@@ -9,7 +9,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
     
     <style>
-           :root {
+        /* Corregir ubicación del carrusel y los puntos de paginación */
+.swiper-container {
+    padding-bottom: 50px !important; /* Abre espacio libre abajo de las tarjetas */
+    position: relative !important;
+}
+
+.swiper-pagination {
+    bottom: 10px !important; /* Desplaza los puntos azules abajo, fuera de la imagen */
+    top: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #1e3c72 !important; /* Color azul para el punto activo */
+}
+        :root {
             --celeste: #6EC1E4;
             --azul-oscuro: #1e3c72;
             --azul-borde: #00AEEF;
