@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
+        slidesPerGroup: 1,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         breakpoints: {
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
+            640: { slidesPerView: 2, spaceBetween: 20, slidesPerGroup: 1 },
+            1024: { slidesPerView: 3, spaceBetween: 30, slidesPerGroup: 1 }
         }
     });
 
