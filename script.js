@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 1. URL de la App de Google Apps Script donde se guardan los votos
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzlM_LWSnbePRLDPV4fPBKdVzivIuPoG-JvGqF-tQV_2jaSX6RRSh_s33M6nZpuHtQ0fw/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIM_LWSnbePRLDPV4fPBKdVzivluPoG-JvGqF-tQV_2jaSX6RRSh_s33M6nZpuHtQ0fw/exec";
 
     // 2. Inicialización del Carrusel Swiper
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
         slidesPerGroup: 1,
+        loop: true, // Permite navegación continua entre todas las listas
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         breakpoints: {
             640: { slidesPerView: 2, spaceBetween: 20, slidesPerGroup: 1 },
-            1024: { slidesPerView: 3, spaceBetween: 30, slidesPerGroup: 1 }
+            1024: { slidesPerView: 3, spaceBetween: 30, slidesPerGroup: 1 },
         }
     });
 
