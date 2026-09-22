@@ -6,15 +6,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
-        slidesPerGroup: 1,
-        loop: true, // Permite navegación continua entre todas las listas
+        loop: false, // Desactivado para evitar bloqueos de índice en tarjetas impares
+        rewind: true, // Permite volver al inicio al llegar al final y viceversa
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: true, // Ajusta los puntos visualmente para que no se saturen
         },
         breakpoints: {
-            640: { slidesPerView: 2, spaceBetween: 20, slidesPerGroup: 1 },
-            1024: { slidesPerView: 3, spaceBetween: 30, slidesPerGroup: 1 },
+            640: { 
+                slidesPerView: 2, 
+                spaceBetween: 20 
+            },
+            1024: { 
+                slidesPerView: 3, 
+                spaceBetween: 30 
+            },
         }
     });
 
